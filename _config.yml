@@ -1,20 +1,13 @@
 # Dependencies
-lsi: false
-safe: true
-incremental: false
 highlighter: rouge
-gist:
-  noscript: false
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
+gems: [jekyll-gist]
 
 
 # Setup
 title:            Machine Learning Algorithms - Review
 tagline:          'Machine Learning Algorithms - Review'
 description:      'Construction of a Github page with a review of some Machine Learning algorithms'
-url:              https://danmartyns.github.io/machine-learning-algorithms-review/
+url:              https://danmartyns.github.io/machine-learning-algorithms-review
 baseurl:          /
 
 # Permalinks
