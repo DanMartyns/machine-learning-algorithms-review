@@ -1,0 +1,25 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            Machine Learning Algorithms - Review
+tagline:          'Machine Learning Algorithms - Review'
+description:      'Construction of a Github page with a review of some Machine Learning algorithms'
+url:              https://danmartyns.github.io/machine-learning-algorithms-review/
+baseurl:          /machine-learning-algorithms-review
+
+author:
+  name:           'Daniel Martins'
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/DanMartyns/machine-learning-algorithms-review
