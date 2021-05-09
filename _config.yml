@@ -6,7 +6,7 @@ highlighter:      pygments
 title:            Machine Learning Algorithms - Review
 tagline:          'Machine Learning Algorithms - Review'
 description:      'Construction of a Github page with a review of some Machine Learning algorithms'
-url:              https://danmartyns.github.io/machine-learning-algorithms-review/
+url:              danmartyns.github.io
 baseurl:          /machine-learning-algorithms-review
 
 # Permalinks
