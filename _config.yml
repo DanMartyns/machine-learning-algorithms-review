@@ -2,10 +2,6 @@
 markdown:         redcarpet
 highlighter:      pygments
 
-# Permalinks
-permalink:        pretty
-relative_permalinks: true
-
 # Setup
 title:            Machine Learning Algorithms - Review
 tagline:          'Machine Learning Algorithms - Review'
