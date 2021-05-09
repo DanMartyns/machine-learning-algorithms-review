@@ -9,6 +9,9 @@ description:      'Construction of a Github page with a review of some Machine L
 url:              https://danmartyns.github.io/machine-learning-algorithms-review/
 baseurl:          /machine-learning-algorithms-review
 
+# Permalinks
+permalink:        pretty
+
 author:
   name:           'Daniel Martins'
 
