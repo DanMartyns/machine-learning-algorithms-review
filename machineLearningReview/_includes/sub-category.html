@@ -1,0 +1,21 @@
+<section class="related" style="margin-bottom: 5%;">
+    {% assign posts = site.posts | where_exp: "post", "post.subcategory" | sort: 'identifier' %}
+    {% assign i = 0 %}
+    {% for post in posts %}
+        {% if include.title == post.subcategory[0] %}
+            {% if i == 0 %}
+                <h4>Related Models</h4>
+            {% endif %}
+            <ul class="posts-list" style="margin: 1%; margin-bottom: 0;">
+                <li>
+                    <p style="margin: 0; font-size: 16px;">
+                        <a href="{{ post.url | relative_url }}">
+                        {{ post.title }}
+                        </a>
+                    </p>
+                </li>
+            </ul>
+            {% assign i = i | plus: 1 %}
+        {% endif %}
+    {% endfor %}
+  </section>

@@ -203,8 +203,8 @@ body {
     color: $body-color;
     min-height: 100vh;
     padding:
-      $section-spacing * 2
-      $section-spacing * 2
+      $section-spacing 
+      $section-spacing
       0;
 
     @if $layout-reverse {

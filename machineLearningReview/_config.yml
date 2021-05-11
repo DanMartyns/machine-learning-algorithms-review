@@ -16,7 +16,6 @@ baseurl:          '/machine-learning-algorithms-review'
 
 author:
   name:           'Daniel Martins'
-  url:            https://twitter.com/fongandrewc
 
 paginate:         5
 # paginate_path:    '/page:num'
@@ -26,6 +25,11 @@ plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
+  - jekyll-last-modified-at
+
+# Optional. The default date format, used if none is specified in the tag.
+last-modified-at:
+    date-format: '%d-%b-%y'
 
 # Sidebar link settings
 sidebar_home_link:  true
