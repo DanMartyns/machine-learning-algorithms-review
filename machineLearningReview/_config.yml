@@ -27,9 +27,9 @@ plugins:
   - jekyll-paginate
   - jekyll-last-modified-at
 
-# Optional. The default date format, used if none is specified in the tag.
-last-modified-at:
-    date-format: "%b %d, %Y"
+sass:
+  sass_dir: _sass
+  style: compressed
 
 # Sidebar link settings
 sidebar_home_link:  true
