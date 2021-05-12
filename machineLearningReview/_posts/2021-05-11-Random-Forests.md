@@ -12,7 +12,6 @@ tags:
   - Classification
   - Strenghts
   - Weaknesses
-last_modified_at: {{ page.last_modified_at }}
 ---
 
 A main drawback of decision trees is that they tend to overfit the training data. Random forests are one way to address this problem. A random forest is essentially a collection of decision trees, where each tree is slightly different from the others. The idea behind this is that each tree might do a relatively good job of predicting, but will likely overfit in different ways, we can reduce the amount of overfitting by averaging their results.

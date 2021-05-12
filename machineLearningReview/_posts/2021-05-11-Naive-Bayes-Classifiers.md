@@ -10,7 +10,6 @@ tags:
   - Classification
   - Strenghts
   - Weaknesses
-last_modified_at: {{ page.last_modified_at }}
 ---
 
 Naive Bayes Classifiers are a family of classifiers **very similar to the linear models. However, they tend to be even faster in training.** The price paid for this efficiency is that Naive Bayes models **provide generalization performance slightly worse** than that of linear classifiers like *Logistic Regression* and *Linear SVC*.

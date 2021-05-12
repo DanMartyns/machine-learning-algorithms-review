@@ -13,7 +13,6 @@ tags:
   - Strenghts
   - Weaknesses
 
-last_modified_at: {{ page.last_modified_at }}
 ---
 
 Linear models make a prediction using a *linear function* of the input features.

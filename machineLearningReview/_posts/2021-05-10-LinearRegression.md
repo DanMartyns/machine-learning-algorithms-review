@@ -10,7 +10,6 @@ tags:
   - Supervised Learning
   - Linear Models
   - Regression
-last_modified_at: {{ page.last_modified_at }}
 ---
 
 Linear regression, or *ordinary least squares* (OLS), is the simplest and most classic linear method for regression. Linear regression finds the parameters $$\Theta$$ that minimize the *mean squared error* between predictions and the true regression targets, *y*, on the training set. **The *mean squared error* is the sum of the squared differences between the predictions and the true values.** Linear regression has no parameters which is a benefit, but is also has no way to control model complexity.

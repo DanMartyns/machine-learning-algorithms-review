@@ -10,7 +10,6 @@ tags:
   - Classification
   - Strenghts
   - Weaknesses
-last_modified_at: {{ page.last_modified_at }}
 ---
 
 Decision trees are widely used models for classification and regression tasks. Essentially, they predict a target by learning decision rules from features. As the name suggests, we can think of this model as breaking down our data by making a decision based on asking a series of questions.

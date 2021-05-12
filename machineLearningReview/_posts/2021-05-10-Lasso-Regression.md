@@ -10,7 +10,6 @@ tags:
   - Supervised Learning
   - Linear Models
   - Regression
-last_modified_at: {{ page.last_modified_at }}
 ---
 
 An alternative to Ridge for regularizing linear regression is Lasso. As with ridge regression, using the lasso also restricts coefficients to be close to zero, but in a slightly different way, called L1 regularization. The consequence of L1 regularization is that when using the lasso, some coefficients are exactly zero. This means some features are entirely ignored by the model. This can be seen as a form of automatic feature selection. Having some coefficients be exactly zero often makes a model easier to interpret, and can reveal the most important features of your model.

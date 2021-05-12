@@ -29,7 +29,7 @@ plugins:
 
 # Optional. The default date format, used if none is specified in the tag.
 last-modified-at:
-    date-format: '%d-%b-%y'
+    date-format: "%b %d, %Y"
 
 # Sidebar link settings
 sidebar_home_link:  true

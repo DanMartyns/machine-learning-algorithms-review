@@ -9,7 +9,6 @@ tags:
   - Machine Learning
   - problems
   - datasets
-last_modified_at: {{ page.last_modified_at }}
 ---
 
 ## Problems Machine Learning Can Solve

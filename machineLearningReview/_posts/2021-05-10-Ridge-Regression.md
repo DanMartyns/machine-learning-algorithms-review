@@ -10,7 +10,6 @@ tags:
   - Supervised Learning
   - Linear Models
   - Regression
-last_modified_at: {{ page.last_modified_at }}
 ---
 
 Ridge is also a linear model for regression, so the formula it uses to make predictions is the same one used for ordinary least squares. In ridge regression, thought, the coefficients $$\Theta$$ are chosen not only so that they predict well on the training data, but also to fit an additional constraint. We also want the magnitude of coefficients to be as small as possible; in other words, all entries of $$\Theta$$ should be close to 0. Intuitively, this means each feature should have as little effect on the outcome as possible (which translates to having a small slope), while still predicting well. This constraint is an example of what is called regularization. Regularization means explicitly restricting a model to avoid overfitting. The particular kind used by ridge regression is known as L2 regularization.
