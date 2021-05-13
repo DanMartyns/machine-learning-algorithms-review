@@ -23,8 +23,10 @@ plugins:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-last-modified-at
+load_paths:
+  - _sass
 sass:
-  sass_dir: _sass  /hoosegow/.bundle/ruby/2.7.0/gems/jekyll-theme-primer-0.5.4/_sass
+  sass_dir: _sass
   style: compressed
 # Sidebar link settings
 sidebar_home_link:  true
