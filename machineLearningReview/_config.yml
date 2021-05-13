@@ -13,31 +13,25 @@ baseurl:          '/machine-learning-algorithms-review'
                   # If you want to move just the blog index pages but keep
                   # other pages at root, see the paginate_path and
                   # sidebar_blog_link below.
-
 author:
   name:           'Daniel Martins'
-
 paginate:         5
 # paginate_path:    '/page:num'
                     # Or '/blog/page:num' if you want to move your index pages
-
 plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
   - jekyll-last-modified-at
-
 sass:
-  sass_dir: _sass
+  sass_dir: _sass  /hoosegow/.bundle/ruby/2.7.0/gems/jekyll-theme-primer-0.5.4/_sass
   style: compressed
-
 # Sidebar link settings
 sidebar_home_link:  true
 # sidebar_blog_link:  '/blog'   # By default, your home page is your blog
                                 # page. If you change your paginate_path,
                                 # set this to the root of the paginate_path
                                 # to enable a separate blog link.
-
 # Disqus Comments
 disqus:
   # Leave shortname blank to disable comments site-wide.
