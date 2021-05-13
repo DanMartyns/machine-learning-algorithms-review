@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+  <title>
+    
+      Decision Trees &middot; ML Algorithms Review
+    
+  </title>
+
+  
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/machine-learning-algorithms-review/assets/css/main.css" />
+  
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface" />
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/machine-learning-algorithms-review/favicon.png" />
+<link rel="shortcut icon" href="/machine-learning-algorithms-review/favicon.ico" />
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/machine-learning-algorithms-review/feed.xml" />
+
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <!-- Additional head bits without overriding original head -->
+</head>
+
+
+  <body class="post">
+
+    <div id="sidebar">
+  <header>
+    <img src="http://localhost:4000//machine-learning-algorithms-review/favicon.png" />
+    <div class="site-title">
+      <a href="/machine-learning-algorithms-review/">
+        
+          <span class="back-arrow icon"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 0h24v24H0z" fill="none"/>
+  <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+</svg></span>
+        
+      </a>
+    </div>
+    <p class="lead">Construction of a web page with a review of some Machine Learning algorithms.</p>
+  </header>
+  <nav id="sidebar-nav-links">
+  
+    <a class="home-link "
+        href="/machine-learning-algorithms-review/">Home</a>
+  
+  
+
+  
+
+  
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+  
+
+
+  
+    
+  
+
+  
+    
+      <a class="category-link "
+          href="/machine-learning-algorithms-review/category/MachineLearning.html">Machine Learning</a>
+    
+  
+
+  
+    
+      <a class="category-link "
+          href="/machine-learning-algorithms-review/category/SupervisedLearning.html">Supervised Learning</a>
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+  <!-- Optional additional links to insert in sidebar nav -->
+</nav>
+
+
+  
+
+  <nav id="sidebar-icon-links">
+  
+
+  <a id="subscribe-link"
+     class="icon" title="Subscribe" aria-label="Subscribe"
+     href="/machine-learning-algorithms-review/feed.xml">
+    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <circle cx="6.18" cy="17.82" r="2.18"/>
+    <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+</svg>
+  </a>
+
+  
+  
+  
+  
+
+  
+    <a id="tags-link"
+       class="icon"
+       title="Tags" aria-label="Tags"
+       href="/machine-learning-algorithms-review/tags.html">
+      <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+    </a>
+  
+
+  <!-- 
+    <a id="search-link"
+       class="icon"
+       title="Search" aria-label="Search"
+       href="/machine-learning-algorithms-review/search.html">
+      <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+    </a> -->
+  
+
+  <!-- Optional additional links to insert for icons links -->
+</nav>
+
+  <p>
+  &copy; 2021.
+  <a href="/machine-learning-algorithms-review/LICENSE.md">MIT License.</a>
+</p>
+
+</div>
+
+    <main class="container">
+      <header>
+  <h1 class="post-title">Decision Trees</h1>
+</header>
+<div class="content">
+  <div class="post-meta">
+  <span class="post-date">11 May 2021</span>
+  <span class="post-categories">
+    
+      &bull;
+
+      
+      
+      
+
+      
+        <a href="/machine-learning-algorithms-review/category/SupervisedLearning.html">
+          Supervised Learning
+        </a>
+      
+    
+  </span>
+</div>
+
+  <div class="post-body">
+    <p>Decision trees are widely used models for classification and regression tasks. Essentially, they predict a target by learning decision rules from features. As the name suggests, we can think of this model as breaking down our data by making a decision based on asking a series of questions.</p>
+
+<p><img src="http://localhost:4000//machine-learning-algorithms-review/assets/images/011.jpeg" alt="pair_plot" width="70%" style="margin: auto; display: block; " />
+<br /></p>
+
+<p>Based on the features in our training set, the decision tree model learns a series of questions to infer the class labels of the samples. As we can see, decision trees are attractive models if we care about interpretability.</p>
+
+<p>A decision tree is constructed by recursive partioning - starting from a root node (called first <strong>parent</strong>), and each node can be split into left and right <strong>child</strong> nodes. Nodes that do not have any child are known as <strong>terminal/leaf nodes</strong>.</p>
+
+<p>A decision tree makes decisions by splitting nodes into sub-nodes. This process is performed multiple times during the training process until only homogenous nodes are left. <strong>Node splitting</strong>, or <strong>splitting</strong>, is the process of dividing a node into multiple sub-nodes to create relatively terminal nodes. There are multiple ways of doing this, which can be broadly divided into two categories based on the type of target variable:</p>
+
+<ol>
+  <li>Continuous target variable
+    <ul>
+      <li>Reduction in Variance</li>
+    </ul>
+  </li>
+  <li>Categorical target variable
+    <ul>
+      <li>Gini Impurity</li>
+      <li>Entropy/Information Gain</li>
+      <li>Chi-Square</li>
+    </ul>
+  </li>
+</ol>
+
+<p>Although the preceding figure illustrates the concept of a decision tree based on categorical targets (<strong>classification</strong>), the same concept applies if our targets are real numbers (<strong>regression</strong>).</p>
+
+<h2 id="controlling-complexity-of-decision-trees">Controlling complexity of decision trees</h2>
+
+<p>Typically, building a tree as described here and continuing until all leaves are terminal leads to models that are very complex and highly overfit to the training data. The presence of terminal leaves mean that a tree is 100% accurate on the training set; each data point in the training set is in a leaf that has the correct majority class.</p>
+
+<p><img src="http://localhost:4000//machine-learning-algorithms-review/assets/images/012.png" alt="pair_plot" width="70%" style="margin: auto; display: block; " />
+<br /></p>
+
+<p>The overfitting can be seen in the image above. You can see the regions determined to
+belong to class 1 in the middle of all the points belonging to class 0. On the other hand, there is a small strip predicted as class 0 around the point belonging to class 0 to the very right.  This is not how one would imagine the decision boundary to look, 
+and the decision boundary focuses a lot on single outlier points that are far away
+from the other points in that class.</p>
+
+<p>There are two strategies to prevent overfitting</p>
+
+<ul>
+  <li>stopping the creation of the tree early (also called pre-pruning)</li>
+  <li>building the tree but then removing or collapsing nodes that contain little information (also called pos-pruning)</li>
+</ul>
+
+<p>Possible criteria for pre-pruning include limiting the maximum depth of the tree, limiting the maximum number of leaves, or requiring a minimum number of points in a node to keep splitting it.</p>
+
+<p>If we don’t restrict the depth of a decision tree, the tree can become arbitrarily deep and complex. Unpruned trees are therefore prone to overfitting and not generalizing well to new data.</p>
+
+<h2 id="regression-decision-trees-vs-linear">Regression (Decision Trees vs Linear)</h2>
+
+<p>All that was said here on decision trees for classification is similarly true for decision trees for regression. The usage and analysis of regression trees is very similar to that classification trees. However, there is a particular property that is important to point out, though. All the tree based regression models are not able to <em>extrapolate</em>, or make predictions outside of the range of the training data.</p>
+
+<p><img src="http://localhost:4000//machine-learning-algorithms-review/assets/images/013.png" alt="pair_plot" width="70%" style="margin: auto; display: block; " />
+<br /></p>
+
+<p>The difference between the models is quite striking. The linear model approximates
+the data with a line, as we knew it would. This line provides quite a good forecast for
+the test data (the years after 2000), while glossing over some of the finer variations in both the training and the test data. The tree model, on the other hand, makes perfect predictions on the training data; we did not restrict the complexity of the tree, so it learned the whole dataset by heart. However, once we leave the data range for which the model has data, the model simply keeps predicting the last known point. The tree has no ability to generate “new” responses, outside of what was seen in the training data. This shortcoming applies to all models based on trees.</p>
+
+<p>It is actually possible to make very good forecasts with tree-based models (for example, when trying to predict whether a price will go up or down). The point of this example was not to show that trees are a bad model for time series, but to illustrate a particular property of how trees make predictions.</p>
+
+<h2 id="strenghts-weaknesses-and-parameters">Strenghts, Weaknesses, and Parameters</h2>
+
+<p>Decision trees have two advantages over many of the algorithms we’ve discussed so far: the resulting model <strong>can easily be visualized and undersood by nonexperts</strong> (at least for small trees), and <strong>the algorithms are completely invariant to scalling of the data</strong>. As each feature is processed separately, and the possible splits of the data don’t depend on scaling, no preprocessing like normalization or standarization of features is needed for decision tree algorithms. In particular, decision trees work well when you have features that are completely different scales, or a mix of binary and continuous features.</p>
+
+<p>The main downside of decision trees is that even with the use of pre-pruning, they tend to overfit and provide poor generalization performance. Therefore, in most applications, the ensemble methods are usually used in place of a single decision tree.</p>
+
+<h1 id="ensembles-of-decision-trees">Ensembles of Decision Trees</h1>
+
+<p>Ensembles are methods that combine multiple machine learning models to create a more powerful models. There are many models in the machine learning literature that belong to this category, but there are two ensemble models that have proven to be effective on a wide range of datasets for classification and regression, both of which use decision trees as their atomic modules: <strong>random forests</strong> and <strong>gradient boosted trees</strong>.</p>
+
+    <section class="related" style="margin-bottom: 5%;">
+    
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                <h4>Related Models</h4>
+            
+            <ul class="posts-list" style="margin: 1%; margin-bottom: 0;">
+                <li>
+                    <p style="margin: 0; font-size: 16px;">
+                        <a href="/machine-learning-algorithms-review/supervised%20learning/2021/05/11/Random-Forests.html">
+                        Random Forests
+                        </a>
+                    </p>
+                </li>
+            </ul>
+            
+        
+    
+  </section>
+    
+
+
+
+<div class="post-tags">
+  
+    
+    <a href="/machine-learning-algorithms-review/tags.html#supervised-learning">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Supervised Learning</span>
+    </a>
+  
+    
+    <a href="/machine-learning-algorithms-review/tags.html#regression">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Regression</span>
+    </a>
+  
+    
+    <a href="/machine-learning-algorithms-review/tags.html#classification">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Classification</span>
+    </a>
+  
+    
+    <a href="/machine-learning-algorithms-review/tags.html#strenghts">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Strenghts</span>
+    </a>
+  
+    
+    <a href="/machine-learning-algorithms-review/tags.html#weaknesses">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Weaknesses</span>
+    </a>
+  
+</div>
+  </div>
+  <section class="related">
+  <h2>Related Posts</h2>
+  <ul class="posts-list">
+    
+      <li>
+        <h4>
+          <a href="/machine-learning-algorithms-review/supervised%20learning/2021/05/11/Random-Forests.html">
+            Random Forests
+            <small>11 May 2021</small>
+          </a>
+        </h4>
+      </li>
+    
+      <li>
+        <h4>
+          <a href="/machine-learning-algorithms-review/supervised%20learning/2021/05/11/Naive-Bayes-Classifiers.html">
+            Naive Bayes Classifier
+            <small>11 May 2021</small>
+          </a>
+        </h4>
+      </li>
+    
+      <li>
+        <h4>
+          <a href="/machine-learning-algorithms-review/supervised%20learning/2021/05/11/Lasso-vs-Ridge.html">
+            Lasso vs Ridge Regression
+            <small>11 May 2021</small>
+          </a>
+        </h4>
+      </li>
+    
+  </ul>
+</section>
+
+</div>
+
+    </main>
+
+    <!-- Optional footer content -->
+
+  </body>
+</html>

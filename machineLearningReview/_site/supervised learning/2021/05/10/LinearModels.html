@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+  <title>
+    
+      Linear Models &middot; ML Algorithms Review
+    
+  </title>
+
+  
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/machine-learning-algorithms-review/assets/css/main.css" />
+  
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface" />
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/machine-learning-algorithms-review/favicon.png" />
+<link rel="shortcut icon" href="/machine-learning-algorithms-review/favicon.ico" />
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/machine-learning-algorithms-review/feed.xml" />
+
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <!-- Additional head bits without overriding original head -->
+</head>
+
+
+  <body class="post">
+
+    <div id="sidebar">
+  <header>
+    <img src="http://localhost:4000//machine-learning-algorithms-review/favicon.png" />
+    <div class="site-title">
+      <a href="/machine-learning-algorithms-review/">
+        
+          <span class="back-arrow icon"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 0h24v24H0z" fill="none"/>
+  <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+</svg></span>
+        
+      </a>
+    </div>
+    <p class="lead">Construction of a web page with a review of some Machine Learning algorithms.</p>
+  </header>
+  <nav id="sidebar-nav-links">
+  
+    <a class="home-link "
+        href="/machine-learning-algorithms-review/">Home</a>
+  
+  
+
+  
+
+  
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+  
+
+
+  
+    
+  
+
+  
+    
+      <a class="category-link "
+          href="/machine-learning-algorithms-review/category/MachineLearning.html">Machine Learning</a>
+    
+  
+
+  
+    
+      <a class="category-link "
+          href="/machine-learning-algorithms-review/category/SupervisedLearning.html">Supervised Learning</a>
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+  <!-- Optional additional links to insert in sidebar nav -->
+</nav>
+
+
+  
+
+  <nav id="sidebar-icon-links">
+  
+
+  <a id="subscribe-link"
+     class="icon" title="Subscribe" aria-label="Subscribe"
+     href="/machine-learning-algorithms-review/feed.xml">
+    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <circle cx="6.18" cy="17.82" r="2.18"/>
+    <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+</svg>
+  </a>
+
+  
+  
+  
+  
+
+  
+    <a id="tags-link"
+       class="icon"
+       title="Tags" aria-label="Tags"
+       href="/machine-learning-algorithms-review/tags.html">
+      <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+    </a>
+  
+
+  <!-- 
+    <a id="search-link"
+       class="icon"
+       title="Search" aria-label="Search"
+       href="/machine-learning-algorithms-review/search.html">
+      <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+    </a> -->
+  
+
+  <!-- Optional additional links to insert for icons links -->
+</nav>
+
+  <p>
+  &copy; 2021.
+  <a href="/machine-learning-algorithms-review/LICENSE.md">MIT License.</a>
+</p>
+
+</div>
+
+    <main class="container">
+      <header>
+  <h1 class="post-title">Linear Models</h1>
+</header>
+<div class="content">
+  <div class="post-meta">
+  <span class="post-date">10 May 2021</span>
+  <span class="post-categories">
+    
+      &bull;
+
+      
+      
+      
+
+      
+        <a href="/machine-learning-algorithms-review/category/SupervisedLearning.html">
+          Supervised Learning
+        </a>
+      
+    
+  </span>
+</div>
+
+  <div class="post-body">
+    <p>Linear models make a prediction using a <em>linear function</em> of the input features.</p>
+
+<h2 id="linear-models-for-regression">Linear Models for Regression</h2>
+
+<p>For regression, the general prediction for a linear model looks as follows:</p>
+
+\[y = \Theta_0 + \Theta_1x_1 + \Theta_2x_2 + \Theta_px_p\]
+
+<p>Here, \(x_0\) to \(x_p\) denotes the features (in this example, the number of features is p) of a single data point, \(\Theta\) are parameters of the model that are learned, and \(y\) is the prediction the model makes.</p>
+
+<p>Linear models for regression can be characterized as regression models for which the prediction is a line for a single feature, a plane when using two features, or a hyperplane in a higher dimensions.</p>
+
+<p>For datasets with many features, linear models can be very powerful. In particular, if you have more features thain training data points, any target <em>y</em> can be perfectly modeled (on the training set) as a linear function.</p>
+
+<p>There are many different linear models for regression. The difference between these models lies in how the models parameters \(\Theta\) are learned from the training data, and how model complexity can be controlled.</p>
+
+<h2 id="linear-models-for-classification">Linear Models for Classification</h2>
+
+<p>The formula looks very similar to the one for linear regression, but instead of returning the weighted sum of features, we threshold the predicted value at zero. If the function is smaller than zero, we predict the class -1; if it is larger than zero, we predict the class +1. The prediction rule is common to linear models for classification. Again, there are many different ways to find the coefficients \(\Theta\) and the intercept \(\Theta_0\).</p>
+
+\[y = \Theta_0 + \Theta_1x_1 + \Theta_2x_2 + \Theta_px_p &gt; 0\]
+
+<p>For linear models for regression, the output, \(y\), is a linear function of the features: a line, plane, or hyperplane. For linear models for classification, the <em>decision boundary</em> is a linear function of the input. In other words, a (binary) linear classifier is a classifier that separates two classes using a line, a plane or a hyperplane.</p>
+
+<p>The two most common linear classification algorithms are <em>Logistic Regression</em> and <em>Linear Support Vector Machine</em>.</p>
+
+<p>The two models come up with similar decision boundaries. By default, both models apply an L2 regularization, in the same way that Ridge does for regression.</p>
+
+<p>For <em>Logistic Regression</em> and <em>Linear SVM</em> the trade-off parameter that determines the strength of the regularization is called <em>C</em>, and higher values of <em>C</em> correspond to less regularization. In other words, when you use a high value of <em>C</em>, <em>Logistic Regression</em> and <em>Linear SVM</em> try to fit the training set as best as possible, while with low values of the parameter <em>C</em>, the models put more emphasis on finding a coefficient vector \(\Theta\) that is close to zero.</p>
+
+<p>Another interessant aspect is how the parameter <em>C</em> acts. Using low values of <em>C</em> will cause the algorithms to try adjust to the “majority” of data points, while using a higher value of <em>C</em> stresses the importance that each individual data point be classified correctly.</p>
+
+<p><img src="http://localhost:4000//machine-learning-algorithms-review/assets/images/007.png" alt="pair_plot" width="90%" style="margin: auto; display: block; " />
+<br /></p>
+
+<p>Similarly to the case of regression, linear models for classification might seem very restrictive in low-dimensional spaces, only allowing for decision boundaries that are straight lines or planes. Again, in high dimensions, linear models for classification become very powerful, and guarding against overfitting becomes increasingly important when considering more features.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">In</span><span class="p">:</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_breast_cancer</span>
+
+<span class="n">cancer</span> <span class="o">=</span> <span class="n">load_breast_cancer</span><span class="p">()</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">cancer</span><span class="p">.</span><span class="n">data</span><span class="p">,</span> <span class="n">cancer</span><span class="p">.</span><span class="n">target</span> <span class="n">stratify</span><span class="o">=</span><span class="n">cancer</span><span class="p">.</span><span class="n">target</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="n">logreg</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">().</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Training set score: {:.3f}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">logreg</span><span class="p">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Test set score: {:.3f}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">logreg</span><span class="p">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
+
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Out:
+Training set score: 0.953
+Test set score: 0.958
+</code></pre></div></div>
+
+<p>The default value of \(C=1\) provides quite good performance, with \(95\%\) accuracy on both the training and the test set. But as training and test set performance are very close, it is likely that we are underfitting. Let’s try to increase <em>C</em> to fit a more flexible model:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">In</span><span class="p">:</span>
+<span class="n">logreg100</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mi">100</span><span class="p">).</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Training set score: {:.3f}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">logreg100</span><span class="p">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Test set score: {:.3f}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">logreg100</span><span class="p">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
+
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Out:
+Training set score: 0.972
+Test set score: 0.965
+</code></pre></div></div>
+
+<p>Using \(C=100\) results in higher training set accuracy, and also a slightly increased test set accuracy, confirming our intuition that a more complex model should perform better. We can also investigate what happens if we use an even more regularized model than the default of \(C=1\), by setting \(C=0.01\):</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">In</span><span class="p">:</span>
+<span class="n">logreg001</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mf">0.01</span><span class="p">).</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Training set score: {:.3f}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">logreg001</span><span class="p">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Test set score: {:.3f}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">logreg001</span><span class="p">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
+
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Out:
+Training set score: 0.934
+Test set score: 0.930
+</code></pre></div></div>
+
+<p>As expected, when moving more to the left along the scale from an already underfit model, both training and test set accuracy decrease relative to the default parameters.</p>
+
+<h2 id="linear-models-for-multiclass-classification">Linear Models for Multiclass Classification</h2>
+
+<p>A common technique to extend a binary classification algorithm to a multiclass classification algorithm is the one-vs.-rest approach. In the one-vs.-rest approach, a binary model is learned for each class that tries to separate that class from all of the other classes, resulting in as many binary models as there are classes. To make a prediction, all binary classifiers are run on a test point. The classifier that has the highest score on its single class “wins, ” and this class label is returned as the prediction. Let’s visualize the lines given by the three binary classifiers</p>
+
+<p><img src="http://localhost:4000//machine-learning-algorithms-review/assets/images/008.png" alt="pair_plot" width="70%" style="margin: auto; display: block; " />
+<br /></p>
+
+<p>You can see that all the points belonging to class 0 in the training data are above the line corresponding to class 0, which means they are on the “class 0” side of this binary classifier. The points in class 0 are above the line corresponding to class 2, which means they are classified as “rest” by the binary classifier for class 2. The points belonging to class 0 are to the left of the line corresponding to class 1, which means the binary classifier for class 1 also classifies them as “rest.” Therefore, any point in this area will be classified as class 0 by the final classifier (the result of the classifica‐ tion confidence formula for classifier 0 is greater than zero, while it is smaller than zero for the other two classes).</p>
+
+<p><strong>But what about the triangle in the middle of the plot?</strong> All three binary classifiers classify points there as “rest”. Which class would a point there be assigned to? The answer is the one with the highest value for the classification formula: the class of the closest line.</p>
+
+<h2 id="strenghts-weaknesses-and-parameters">Strenghts, Weaknesses, and Parameters</h2>
+
+<p>The main parameter of linear models is the regularization parameter, called <em>alpha</em> in the regression models and <em>C</em> in <em>Linear SVM</em> and <em>Logistic Regression</em>. Large values for <em>alpha</em> or small values for <em>C</em> mean simple models. In particular for the regression models, tunning these parameters is quite important. Usually <em>C</em> and <em>alpha</em> are searched for on a logarithmic scale. The other decision importante to make is whetever you want to use L1 regularization or L2 regularization. If you assume that only a few of your features are actually important, you should use L1. Otherwise, you should default to L2. L1 is actually important if interpretability of the model is important. As L1 will use only a few features, it is easier to explain which features are important to the model, and what features of these features are.</p>
+
+<p><strong>Linear features are very fast to train, and also fast to predict. They scale to very large datasets and work well with sparse data.</strong> If your data consists of hundreds of thousands or millions of samples, you might want to investigate using the \(solver = 'sag'\) option in <em>Logistic Regression</em> and <em>Ridge</em>, which can be faster than the default on large datasets.</p>
+
+<p>Other options are the <em>SGDClassifier</em> class and the <em>SGDRegressor</em> class, which implement even more scalable versions of the linear models described here.</p>
+
+<p>Another stregth of linear models is that they make it relatively easy to understand how a prediction is made, using the formulas we saw earlier for regression and classification. Unfortunally, it is often not entirely clear why coefficients are the way they are. This is particularly true if your dataset has highly correlated features; in these cases, the coefficients might be hard to interpret.</p>
+
+<p><strong>Linear models often perform well when the number of features is large compared to the number of samples.</strong> <strong>They are also often used on very large datasets, simply because it’s not feasible to train other models.</strong> However, in lower-dimensional spaces, other models might be yield better generalization performance.</p>
+
+    <section class="related" style="margin-bottom: 5%;">
+    
+    
+    
+        
+            
+                <h4>Related Models</h4>
+            
+            <ul class="posts-list" style="margin: 1%; margin-bottom: 0;">
+                <li>
+                    <p style="margin: 0; font-size: 16px;">
+                        <a href="/machine-learning-algorithms-review/supervised%20learning/2021/05/10/LinearRegression.html">
+                        Linear Regression (aka ordinary least squares)
+                        </a>
+                    </p>
+                </li>
+            </ul>
+            
+        
+    
+        
+            
+            <ul class="posts-list" style="margin: 1%; margin-bottom: 0;">
+                <li>
+                    <p style="margin: 0; font-size: 16px;">
+                        <a href="/machine-learning-algorithms-review/supervised%20learning/2021/05/10/Ridge-Regression.html">
+                        Ridge Regression
+                        </a>
+                    </p>
+                </li>
+            </ul>
+            
+        
+    
+        
+            
+            <ul class="posts-list" style="margin: 1%; margin-bottom: 0;">
+                <li>
+                    <p style="margin: 0; font-size: 16px;">
+                        <a href="/machine-learning-algorithms-review/supervised%20learning/2021/05/10/Lasso-Regression.html">
+                        Lasso Regression
+                        </a>
+                    </p>
+                </li>
+            </ul>
+            
+        
+    
+        
+            
+            <ul class="posts-list" style="margin: 1%; margin-bottom: 0;">
+                <li>
+                    <p style="margin: 0; font-size: 16px;">
+                        <a href="/machine-learning-algorithms-review/supervised%20learning/2021/05/11/Lasso-vs-Ridge.html">
+                        Lasso vs Ridge Regression
+                        </a>
+                    </p>
+                </li>
+            </ul>
+            
+        
+    
+        
+    
+  </section>
+    
+
+
+
+<div class="post-tags">
+  
+    
+    <a href="/machine-learning-algorithms-review/tags.html#supervised-learning">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Supervised Learning</span>
+    </a>
+  
+    
+    <a href="/machine-learning-algorithms-review/tags.html#linear-models">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Linear Models</span>
+    </a>
+  
+    
+    <a href="/machine-learning-algorithms-review/tags.html#multiclass">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Multiclass</span>
+    </a>
+  
+    
+    <a href="/machine-learning-algorithms-review/tags.html#regression">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Regression</span>
+    </a>
+  
+    
+    <a href="/machine-learning-algorithms-review/tags.html#classification">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Classification</span>
+    </a>
+  
+    
+    <a href="/machine-learning-algorithms-review/tags.html#strenghts">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Strenghts</span>
+    </a>
+  
+    
+    <a href="/machine-learning-algorithms-review/tags.html#weaknesses">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Weaknesses</span>
+    </a>
+  
+</div>
+  </div>
+  <section class="related">
+  <h2>Related Posts</h2>
+  <ul class="posts-list">
+    
+      <li>
+        <h4>
+          <a href="/machine-learning-algorithms-review/supervised%20learning/2021/05/11/Random-Forests.html">
+            Random Forests
+            <small>11 May 2021</small>
+          </a>
+        </h4>
+      </li>
+    
+      <li>
+        <h4>
+          <a href="/machine-learning-algorithms-review/supervised%20learning/2021/05/11/Naive-Bayes-Classifiers.html">
+            Naive Bayes Classifier
+            <small>11 May 2021</small>
+          </a>
+        </h4>
+      </li>
+    
+      <li>
+        <h4>
+          <a href="/machine-learning-algorithms-review/supervised%20learning/2021/05/11/Lasso-vs-Ridge.html">
+            Lasso vs Ridge Regression
+            <small>11 May 2021</small>
+          </a>
+        </h4>
+      </li>
+    
+  </ul>
+</section>
+
+</div>
+
+    </main>
+
+    <!-- Optional footer content -->
+
+  </body>
+</html>

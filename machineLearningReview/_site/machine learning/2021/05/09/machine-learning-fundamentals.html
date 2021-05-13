@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+  <title>
+    
+      Machine Learning Fundamentals &middot; ML Algorithms Review
+    
+  </title>
+
+  
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/machine-learning-algorithms-review/assets/css/main.css" />
+  
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface" />
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/machine-learning-algorithms-review/favicon.png" />
+<link rel="shortcut icon" href="/machine-learning-algorithms-review/favicon.ico" />
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/machine-learning-algorithms-review/feed.xml" />
+
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <!-- Additional head bits without overriding original head -->
+</head>
+
+
+  <body class="post">
+
+    <div id="sidebar">
+  <header>
+    <img src="http://localhost:4000//machine-learning-algorithms-review/favicon.png" />
+    <div class="site-title">
+      <a href="/machine-learning-algorithms-review/">
+        
+          <span class="back-arrow icon"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 0h24v24H0z" fill="none"/>
+  <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+</svg></span>
+        
+      </a>
+    </div>
+    <p class="lead">Construction of a web page with a review of some Machine Learning algorithms.</p>
+  </header>
+  <nav id="sidebar-nav-links">
+  
+    <a class="home-link "
+        href="/machine-learning-algorithms-review/">Home</a>
+  
+  
+
+  
+
+  
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+  
+
+
+  
+    
+  
+
+  
+    
+      <a class="category-link "
+          href="/machine-learning-algorithms-review/category/MachineLearning.html">Machine Learning</a>
+    
+  
+
+  
+    
+      <a class="category-link "
+          href="/machine-learning-algorithms-review/category/SupervisedLearning.html">Supervised Learning</a>
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+  <!-- Optional additional links to insert in sidebar nav -->
+</nav>
+
+
+  
+
+  <nav id="sidebar-icon-links">
+  
+
+  <a id="subscribe-link"
+     class="icon" title="Subscribe" aria-label="Subscribe"
+     href="/machine-learning-algorithms-review/feed.xml">
+    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <circle cx="6.18" cy="17.82" r="2.18"/>
+    <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+</svg>
+  </a>
+
+  
+  
+  
+  
+
+  
+    <a id="tags-link"
+       class="icon"
+       title="Tags" aria-label="Tags"
+       href="/machine-learning-algorithms-review/tags.html">
+      <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+    </a>
+  
+
+  <!-- 
+    <a id="search-link"
+       class="icon"
+       title="Search" aria-label="Search"
+       href="/machine-learning-algorithms-review/search.html">
+      <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+    </a> -->
+  
+
+  <!-- Optional additional links to insert for icons links -->
+</nav>
+
+  <p>
+  &copy; 2021.
+  <a href="/machine-learning-algorithms-review/LICENSE.md">MIT License.</a>
+</p>
+
+</div>
+
+    <main class="container">
+      <header>
+  <h1 class="post-title">Machine Learning Fundamentals</h1>
+</header>
+<div class="content">
+  <div class="post-meta">
+  <span class="post-date">09 May 2021</span>
+  <span class="post-categories">
+    
+      &bull;
+
+      
+      
+      
+
+      
+        <a href="/machine-learning-algorithms-review/category/MachineLearning.html">
+          Machine Learning
+        </a>
+      
+    
+  </span>
+</div>
+
+  <div class="post-body">
+    <h2 id="problems-machine-learning-can-solve">Problems Machine Learning Can Solve</h2>
+
+<p>The most successful machine learning algorithms are those that automate decision-making processes by generelizing from known examples. In this setting, which is known as <em>Supervised Learning</em>, the user provides the algorithm with pairs of inputs and desired outputs, and the algorithm finds a way to produce the desired output. <em>Unsupervised Learning</em> are the other type of algorithm that only the input is known, and no known output data is given to the algorithm.</p>
+
+<h2 id="measuring-sucess-training-and-testing-data">Measuring Sucess: Training and Testing data</h2>
+
+<p>Before we can apply our model to new measurements, we need to know whether it actually works - that is, whether we should trust its predictions. First of all, we cannot use the data we used to build the model to evaluated it. This is because our model can always remember the whole training set, and will therefore always predict the correct label for any point in the training set. “Remembering” dont tell us whether our model <strong>generelize</strong> well.</p>
+
+<p>To test the model’s performance, we show it new data for which we have labels. This is usually done by splitting the labeled data we collected into two parts. One part is used to build our machine learning model, called <em>training data</em> and the other part will be used to test the performance of our model, called <em>test data</em>.</p>
+
+    <section class="related" style="margin-bottom: 5%;">
+    
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+  </section>
+    
+
+
+
+<div class="post-tags">
+  
+    
+    <a href="/machine-learning-algorithms-review/tags.html#supervised-learning">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Supervised Learning</span>
+    </a>
+  
+    
+    <a href="/machine-learning-algorithms-review/tags.html#machine-learning">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Machine Learning</span>
+    </a>
+  
+    
+    <a href="/machine-learning-algorithms-review/tags.html#problems">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">problems</span>
+    </a>
+  
+    
+    <a href="/machine-learning-algorithms-review/tags.html#datasets">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">datasets</span>
+    </a>
+  
+</div>
+  </div>
+  <section class="related">
+  <h2>Related Posts</h2>
+  <ul class="posts-list">
+    
+      <li>
+        <h4>
+          <a href="/machine-learning-algorithms-review/supervised%20learning/2021/05/11/Random-Forests.html">
+            Random Forests
+            <small>11 May 2021</small>
+          </a>
+        </h4>
+      </li>
+    
+      <li>
+        <h4>
+          <a href="/machine-learning-algorithms-review/supervised%20learning/2021/05/11/Naive-Bayes-Classifiers.html">
+            Naive Bayes Classifier
+            <small>11 May 2021</small>
+          </a>
+        </h4>
+      </li>
+    
+      <li>
+        <h4>
+          <a href="/machine-learning-algorithms-review/supervised%20learning/2021/05/11/Lasso-vs-Ridge.html">
+            Lasso vs Ridge Regression
+            <small>11 May 2021</small>
+          </a>
+        </h4>
+      </li>
+    
+  </ul>
+</section>
+
+</div>
+
+    </main>
+
+    <!-- Optional footer content -->
+
+  </body>
+</html>

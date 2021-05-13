@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+  <title>
+    
+      Naive Bayes Classifier &middot; ML Algorithms Review
+    
+  </title>
+
+  
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/machine-learning-algorithms-review/assets/css/main.css" />
+  
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface" />
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/machine-learning-algorithms-review/favicon.png" />
+<link rel="shortcut icon" href="/machine-learning-algorithms-review/favicon.ico" />
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/machine-learning-algorithms-review/feed.xml" />
+
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <!-- Additional head bits without overriding original head -->
+</head>
+
+
+  <body class="post">
+
+    <div id="sidebar">
+  <header>
+    <img src="http://localhost:4000//machine-learning-algorithms-review/favicon.png" />
+    <div class="site-title">
+      <a href="/machine-learning-algorithms-review/">
+        
+          <span class="back-arrow icon"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 0h24v24H0z" fill="none"/>
+  <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+</svg></span>
+        
+      </a>
+    </div>
+    <p class="lead">Construction of a web page with a review of some Machine Learning algorithms.</p>
+  </header>
+  <nav id="sidebar-nav-links">
+  
+    <a class="home-link "
+        href="/machine-learning-algorithms-review/">Home</a>
+  
+  
+
+  
+
+  
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+  
+
+
+  
+    
+  
+
+  
+    
+      <a class="category-link "
+          href="/machine-learning-algorithms-review/category/MachineLearning.html">Machine Learning</a>
+    
+  
+
+  
+    
+      <a class="category-link "
+          href="/machine-learning-algorithms-review/category/SupervisedLearning.html">Supervised Learning</a>
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+  <!-- Optional additional links to insert in sidebar nav -->
+</nav>
+
+
+  
+
+  <nav id="sidebar-icon-links">
+  
+
+  <a id="subscribe-link"
+     class="icon" title="Subscribe" aria-label="Subscribe"
+     href="/machine-learning-algorithms-review/feed.xml">
+    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <circle cx="6.18" cy="17.82" r="2.18"/>
+    <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+</svg>
+  </a>
+
+  
+  
+  
+  
+
+  
+    <a id="tags-link"
+       class="icon"
+       title="Tags" aria-label="Tags"
+       href="/machine-learning-algorithms-review/tags.html">
+      <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+    </a>
+  
+
+  <!-- 
+    <a id="search-link"
+       class="icon"
+       title="Search" aria-label="Search"
+       href="/machine-learning-algorithms-review/search.html">
+      <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+    </a> -->
+  
+
+  <!-- Optional additional links to insert for icons links -->
+</nav>
+
+  <p>
+  &copy; 2021.
+  <a href="/machine-learning-algorithms-review/LICENSE.md">MIT License.</a>
+</p>
+
+</div>
+
+    <main class="container">
+      <header>
+  <h1 class="post-title">Naive Bayes Classifier</h1>
+</header>
+<div class="content">
+  <div class="post-meta">
+  <span class="post-date">11 May 2021</span>
+  <span class="post-categories">
+    
+      &bull;
+
+      
+      
+      
+
+      
+        <a href="/machine-learning-algorithms-review/category/SupervisedLearning.html">
+          Supervised Learning
+        </a>
+      
+    
+  </span>
+</div>
+
+  <div class="post-body">
+    <p>Naive Bayes Classifiers are a family of classifiers <strong>very similar to the linear models. However, they tend to be even faster in training.</strong> The price paid for this efficiency is that Naive Bayes models <strong>provide generalization performance slightly worse</strong> than that of linear classifiers like <em>Logistic Regression</em> and <em>Linear SVC</em>.</p>
+
+<p>The reason why Naive Bayes models are so efficient is that they learn parameters by looking at each feature individually and collect simples per-class statistics from each feature. For example, a fruit may be considered to be an apple if it is red, round, and about 3 inches in diameter. Even if these features depend on each other or upon the existence of the other features, all of these properties independently contribute to the probability that this fruit is an apple and that is why it is known as ‘Naive’.</p>
+
+<h3 id="bayestheorem">Bayes’Theorem</h3>
+
+<p>Bayes’Theorem finds the probability of an event occurring given the probability of another event that has already occured.</p>
+
+\[P(A \mid B) = \frac{ P(B \mid A)P(A)}{P(B)}\]
+
+<ul>
+  <li>Basically, we are trying to find probability of event A, given the event B is true. Event B is also termed as <strong>evidence</strong>.</li>
+  <li>\(P(A)\) is the <strong>priori</strong> of A (i.e. the probability of event before evidence is seen). The evidence is an attribute value of an unknown instance.</li>
+  <li>\(P(A \mid B)\) is a posteriori probability of B, i.e the probabily of event after evidence is seen.</li>
+</ul>
+
+<h3 id="how-naive-bayes-works">How Naive Bayes Works?</h3>
+
+<p>I have a training data set of weather and corresponding target ‘Play’. Now we need to classify whetever players will play or not based on weather condition. Example from <a href="https://www.analyticsvidhya.com/blog/2017/09/naive-bayes-explained/">Analytics Vidhya</a>.</p>
+
+<ul>
+  <li>
+    <p>Step 1: Convert the data into a frequency table</p>
+
+    <p><img src="http://localhost:4000//machine-learning-algorithms-review/assets/images/009.png" alt="pair_plot" width="70%" style="margin: auto; display: block; " />
+<br /></p>
+  </li>
+  <li>
+    <p>Step 2: Create Likehood table by finding the probabilities</p>
+
+    <p><img src="http://localhost:4000//machine-learning-algorithms-review/assets/images/010.png" alt="pair_plot" width="70%" style="margin: auto; display: block; " />
+<br /></p>
+  </li>
+  <li>
+    <p>Step 3: Now, use Naive Bayesian equation to calculate the posterior probability for each class. The class with highest probability is the outcome prediction.</p>
+  </li>
+</ul>
+
+<p><strong>Problem: Players will play if weather is sunny. This statement is correct?</strong></p>
+
+<p>\(P(Yes \mid Sunny) = \frac{P(Sunny \mid Yes)P(YES)}{P(Sunny)}\)
+\(P(Yes \mid Sunny) = \frac{\frac{3}{9} \cdot \frac{9}{14}}{\frac{5}{14}} = 0.60\text{, which is a higher probability}\)</p>
+
+<h3 id="naive-bayes-classifiers-variants">Naive Bayes Classifiers Variants</h3>
+
+<p>There are three kinds of Naive Bayes classifiers: <strong>GuassianNV</strong>, <strong>BernoulliNB</strong>, and <strong>MultinomialNV</strong>. GuassianNB can be applied to any countinuous data, while BernoulliNV assumes binary data as MultinomailNB assumes count data (that is, each feature represents an integer count of something, like often a word appers in a sentence). BernoulliNB and MultinomialNB are mostly used in text data classification.</p>
+
+<ul>
+  <li><strong>Guassian</strong> it is used in classification and it assumes that features follow a normal distribution.</li>
+  <li><strong>Multinominal</strong> it is used for discrete counts. For example, let’s say, we have a text classification problem. Here we can consider Bernoulli trials which is one step further and instead of “word occurring in the document”, we have “count how often word occurs in the document”, you can think of as “number of times outcome number \(x_i\) is observed over the \(n\) trials”.</li>
+  <li><strong>Binomial</strong> the binomial model is useful if your feature vectores are binary. One application would be text classification, where the 1s and 0s are “word occurs in the document” and “word does not occur in the document” respectively.</li>
+</ul>
+
+<p>To make prediction, a data point is compared to the statistics for each of the classes, and the best matching class is predicted. Interestingly, for both MultinomialNB and BernoulliNB, this leads to a prediction formula that is of the same form as in the linear models.</p>
+
+<h2 id="strenghts-weaknesses-and-parameters">Strenghts, Weaknesses, and Parameters</h2>
+
+<p>MultinomialNB and BernoulliNB have a single parameter, <em>alpha</em>, which controls model complexity. The way alpha works is that the algorithm adds to the data alpha many virtual points that have positive values for all the features. This results in a “smoothing” of the statistics. A large alpha means more smoothing, resulting in less complex models. The algorithm’s performance is relatively robust to the setting of alpha, meaning that setting alpha is not critical for good performance. However, tuning it usually improves accuracy somewhat.</p>
+
+<p>GuassianNB is mostly used on very high-dimensional data, while the other two variants of naive Bayes are widely used for sparse count data such as text. MultinominalNB usually performs better than BinaryNB, particulary on datasets with a relatively large number of nonzero features (i.e. large documents).</p>
+
+<p>The Naive Bayes models share many of the strenghts and weaknesses of the linear models. <strong>They are very fast to train and to predict, and the training procedure is easy to understand.</strong> The models work very well with high-dimensional sparse data and are relatively robust to the parameters. Naive Bayes models are great baseline models and are often used on very large datasets, where training even a liner model might take too long.</p>
+
+    <section class="related" style="margin-bottom: 5%;">
+    
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+  </section>
+    
+
+
+
+<div class="post-tags">
+  
+    
+    <a href="/machine-learning-algorithms-review/tags.html#supervised-learning">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Supervised Learning</span>
+    </a>
+  
+    
+    <a href="/machine-learning-algorithms-review/tags.html#linear-models">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Linear Models</span>
+    </a>
+  
+    
+    <a href="/machine-learning-algorithms-review/tags.html#classification">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Classification</span>
+    </a>
+  
+    
+    <a href="/machine-learning-algorithms-review/tags.html#strenghts">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Strenghts</span>
+    </a>
+  
+    
+    <a href="/machine-learning-algorithms-review/tags.html#weaknesses">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Weaknesses</span>
+    </a>
+  
+</div>
+  </div>
+  <section class="related">
+  <h2>Related Posts</h2>
+  <ul class="posts-list">
+    
+      <li>
+        <h4>
+          <a href="/machine-learning-algorithms-review/supervised%20learning/2021/05/11/Random-Forests.html">
+            Random Forests
+            <small>11 May 2021</small>
+          </a>
+        </h4>
+      </li>
+    
+      <li>
+        <h4>
+          <a href="/machine-learning-algorithms-review/supervised%20learning/2021/05/11/Lasso-vs-Ridge.html">
+            Lasso vs Ridge Regression
+            <small>11 May 2021</small>
+          </a>
+        </h4>
+      </li>
+    
+      <li>
+        <h4>
+          <a href="/machine-learning-algorithms-review/supervised%20learning/2021/05/11/Decision-Trees.html">
+            Decision Trees
+            <small>11 May 2021</small>
+          </a>
+        </h4>
+      </li>
+    
+  </ul>
+</section>
+
+</div>
+
+    </main>
+
+    <!-- Optional footer content -->
+
+  </body>
+</html>
