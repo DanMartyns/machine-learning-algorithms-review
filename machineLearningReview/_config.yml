@@ -23,8 +23,6 @@ plugins:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-last-modified-at
-load_paths:
-  - _sass
 sass:
   sass_dir: _sass
   style: compressed
