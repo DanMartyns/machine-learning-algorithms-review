@@ -21,7 +21,9 @@ Linear models make a prediction using a *linear function* of the input features.
 
 For regression, the general prediction for a linear model looks as follows:
 
-$$y = \Theta_0 + \Theta_1x_1 + \Theta_2x_2 + \Theta_px_p $$
+\begin{equation}
+y = \Theta_0 + \Theta_1x_1 + \Theta_2x_2 + \Theta_px_p
+\end{equation}
 
 Here, $$x_0$$ to $$x_p$$ denotes the features (in this example, the number of features is p) of a single data point, $$\Theta$$ are parameters of the model that are learned, and $$y$$ is the prediction the model makes.
 
