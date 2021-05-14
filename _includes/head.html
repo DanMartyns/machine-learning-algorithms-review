@@ -16,11 +16,6 @@
 
   {% include google-analytics.html %}
 
-  {% if page.katex %}
-  <!-- KaTeX -->
-  <link rel="stylesheet" href="/assets/plugins/katex.0.11.1/katex.min.css">
-  {% endif %}
-
   <!-- CSS -->
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" />
   {% include font-includes.html %}
@@ -31,7 +26,15 @@
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ site.feed.path | default: 'feed.xml' | relative_url }}" />
 
-  <script type="text/javascript" charset="utf-8" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,https://vincenttam.github.io/javascripts/MathJaxLocal.js"></script>
+  <!-- for mathjax support -->
+  {% if page.usemathjax %}
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+      TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+    <script type="text/javascript" async src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  {% endif %}
 
   {% include custom-head.html %}
 </head>
