@@ -12,7 +12,6 @@ tags:
   - Classification
   - Strenghts
   - Weaknesses
-usemathjax: true
 ---
 
 Linear models make a prediction using a *linear function* of the input features.
