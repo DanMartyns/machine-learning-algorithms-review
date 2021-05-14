@@ -16,6 +16,11 @@
 
   {% include google-analytics.html %}
 
+  {% if page.katex %}
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="/assets/plugins/katex.0.11.1/katex.min.css">
+  {% endif %}
+
   <!-- CSS -->
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" />
   {% include font-includes.html %}
