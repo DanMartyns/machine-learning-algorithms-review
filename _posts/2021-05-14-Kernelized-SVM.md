@@ -109,3 +109,19 @@ The $$\gamma$$ parameter is the one that controls the width of the Guassian kern
 Going from left to right, we increase the value of the parameter $$\gamma$$ from 0.1 to 10. A **small gamma** means **a large radius for the Guassian kernel**, which means that many points are considered close by. This is reflected in very smooth decision boundaries on the left, and boundaries that focus more on single points further to the right. A low value of gamma means that the decision boundary will vary very slow, which yields a model of low complexity, which a high value of gamma yields a more complex model.
 
 Going from top to bottom, we increase the $$C$$ parameter from 0.1 to 1000. As with the linear models, **a small $$C$$ means a very restricted model, where each data point can only have very limited influence**. You can see that at the top left the decision boundary looks very nearly linear, with the misclassified points barely having any influence on the line. **Increasing $$C$$**, as shown on the bottom right, allows these points to have a stronger influence on the model and makes the decision boundary bend to correctly classify them.
+
+SVMs often perform quite well, they are **very sensitive** to the settings of the parameters and to the scalling of the data. In particular, they require all the features to vary on a similar scale. 
+
+## Preprocessing data for SVMs
+
+One way to resolve the scalling of the data is by rescaling each feature so that they are all approximately on the same scale. A common rescaling method for kernel SVMs it to scale the data such that all features are between 0 and 1, using the *MaxMinScaler*.
+
+## Strenghts, Weaknesses, and Parameters
+
+Kernelized support vector machines are powerful models and perform well on a variety of datasets. SVMs allow for complex decision boundaries, even if the data has only a few features. **They work well on low-dimensional and high-dimensional data, but don't scale very well with the number of samples.** Runing a SVM on data with up to 10,000 samples might work well, but working with datasets of size 100,000 or more can become challenging in terms of runtime and memory usage.
+
+Another downside of SVMs is that they require careful preprocessing of the data and tuning of the parameters. This is why, these days, most of people instead use tree-based models such as random forests or gradient boosting (which require little or no preprocessing) in many applications. Furthermore, SVM models are hard to inspect; it can be dificult to understand why a particular prediction was made, and it might be tricky to explain the model to a nonexpert.
+
+Still, it might be worth trying SVMs, particularly if all of your features represent measurements in similar units (e.g. all are pixel intensities) and they are on similar scales.
+
+The important parameters in kernel SVMs are the regularization parameter $$C$$, the choice of the kernel, and the kernel-specific parameters. Although we primarily focused on the RBF kernel. The RBF kernel has only one parameter, $$\gamma$$, which is the inverse of the width of the Guassian kernel. $$\gamma$$ and $$C$$ both control the complexity of the model, with large values in either resulting in a more complex model. Therefore, good settings for the two parameters are usually strongly correlated, and $$C$$ and $$\gamma$$ should be adjusted together.
