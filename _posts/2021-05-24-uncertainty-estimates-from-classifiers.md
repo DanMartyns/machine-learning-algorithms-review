@@ -6,10 +6,9 @@ categories:
   - Supervised Learning
 tags:
   - Supervised Learning
-  - Regression
+  - Decision Function
+  - Predict Probabilities
   - Classification
-  - Strenghts
-  - Weaknesses
 ---
 
 Another useful part of the scikit-learn interface that we haven't talked about yet is the ability of classifiers to provide uncertainty estimates of predictions. Often, you are not only interested in which class a classifier predicts for a certain test point, but also how certain it is that this is the right class. In practice, different kinds of mistakes lead to very different outcomes in real-world applications. Imagine a medical application testing for cancer. Making a false positive prediction might lead to a patient undergoing additional tests, while a false negative prediction might lead to a serious disease not being treated.

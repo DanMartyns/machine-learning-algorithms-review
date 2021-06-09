@@ -5,10 +5,9 @@ title: "Machine Learning Fundamentals"
 categories:
   - Machine Learning
 tags:
-  - Supervised Learning
   - Machine Learning
-  - problems
-  - datasets
+  - Problems
+  - Datasets
 ---
 
 ## Problems Machine Learning Can Solve
